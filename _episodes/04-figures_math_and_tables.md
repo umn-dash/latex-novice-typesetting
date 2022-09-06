@@ -1,5 +1,5 @@
 ---
-title: "Illustrations"
+title: "Figures, math and tables"
 teaching: 0
 exercises: 0
 questions:
@@ -16,9 +16,9 @@ keypoints:
 - "Fourth key point. Captions are short descriptions of an image. Labels are a way to refer to them within the text."
 ---
 
-### Illustrations
+### Figures
 
-We've now got a pretty reasonable-looking document. Let's see about adding in some images.
+We've now got a pretty reasonable-looking document. Let's see about adding some images.
 
 We're going to be using a command called `\includegraphcs[]{}`. It can take many different
 options, and requires one argument—the path to the image file. This command comes from the
@@ -165,6 +165,9 @@ effectively be multiplied against `\textwidth` to produce the actual width.
 \end{landscape}
 ```
 
+## Math typesetting
+
+## Tabular data
 
 > ## Challenge 1
 >

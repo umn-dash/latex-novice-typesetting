@@ -24,8 +24,15 @@ LaTeX is written like a mark-up language, meaning that formatting (including bol
 
 In order to produce the actual document, this mark-up text must be *compiled*. Errors in the mark-up can either be non-fatal, meaning the document will compile with some warnings; or fatal, meaning the document will fail to compile.
 
+### How do you say it?
+> Not like the rubbery substance - LAY-teks - but it's usually pronounced LAH-tekh or LAY-tekh.
+
 ## Our first LaTeX document
 We'll start by creating a new, 'blank', file in Overleaf. You'll notice that its idea of a blank file is not actually an empty one.
+
+1. Sign in to Overleaf.com.
+2. Go to New Project > and select "Blank Project."
+3. Name your project "LaTeX workshop".
 
 Overleaf fills in a lot of things by default, which is one of the benefits to using it; it makes it very easy to get up-and-running in LaTeX.
 
@@ -38,8 +45,9 @@ In the text editor for our 'blank' document, we can see all of the elements nece
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 
-\title{Irish Fairy Tales}
-\author{James Stephens}
+\title{LaTeX Workshop}
+\author{Your Name}
+\date{August 2022}
 
 \begin{document}
 
@@ -48,9 +56,10 @@ In the text editor for our 'blank' document, we can see all of the elements nece
 \section{Introduction}
 
 \end{document}
+
 ```
 
-Commands in LaTeX are distinguished from regular text through use of a backslash `\`. Some commands take options andor arguments. Arguments are placed inside curly braces `{}`. Options go in square brackets `[]`.
+Commands in LaTeX are distinguished from regular text through use of a backslash `\`. Some commands take options and/or arguments. Arguments are placed inside curly braces `{}`. Options go in square brackets `[]`.
 
 The `\begin{}` and `\end{}` commands delineate an *environment*. We'll see more about environments in later episodes; for now, I'll say that environments each have their own set of formatting rules and purpose.
 
@@ -86,22 +95,23 @@ We'll do this using the `lipsum` package, which provides sample text blocks. We'
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum}
 
-\title{Irish Fairy Tales}
-\author{James Stephens}
+\title{Let's do Science!}
+\author{Your Name}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+\section{Abstract}
 \lipsum
 
-\section{Early Life}
+\section{Introduction}
 \lipsum
 
 \end{document}
 ```
 
+Once you've updated the main.tex file, select the Recompile button in Overleaf to update the preview of your file.
 
 > ## Challenge 1
 >
@@ -134,22 +144,6 @@ We'll do this using the `lipsum` package, which provides sample text blocks. We'
 >
 > ## Challenge 2
 >
-> In the above code, which of these describes the text 'JM Synge':
->
-> 1. it is a command
-> 1. it is an argument
-> 1. it is an option
->
-> > ## Answer
-> >
-> > It is an argument; `\author` is a command; an option would be
-> > in square brackets.
-> > {: .tex}
-> {: .solution}
-{: .challenge}
->
-> ## Challenge 3
->
 > Which of these lines should not go in the document preamble?
 >
 > 1. `\maketitle`
@@ -164,7 +158,7 @@ We'll do this using the `lipsum` package, which provides sample text blocks. We'
 > {: .solution}
 {: .challenge}
 >
-> ## Challenge 4
+> ## Challenge 3
 >
 > Which of these lines is optional?
 >

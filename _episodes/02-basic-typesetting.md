@@ -1,307 +1,149 @@
 ---
-title: "Basic Formatting"
+title: "Text Formatting"
 teaching: 0
 exercises: 0
 questions:
-- "Key question: How can I create headings for different things?"
-- "Key question: How can I format text into boldface, or italics?"
-- "Key question: How can I add a footnote to indicate important information?"
+- "Key question: "
+- "Key question: "
 objectives:
-- "First learning objective. Be able to create headings."
-- "Second learning objective. Understand how to add a Table of Contents."
-- "Third learning objective. Learn that there are two different ways to create
-  boldface and italicised text."
-- "Fourth learning objective. Be able to add a footnote in the correct place."
+- "First learning objective."
+- "Second learning objective. "
 keypoints:
-- "First key point. Headings are automatically numbered in the correct order and
-  added to the Table of Contents."
-- "Second key point. `\\textbf{}` and `\\textit{}` format text given to them as
-  an argument. `\\bfseries` and `\\itshape` format all of the text following 
-  them, or within a specified environment."
-- "Third key point. A separate 'mark' can be created for chapters, sections,
-  or other named headings that consists of a shorter version of the name for use
-  in headers and the Table of Contents."
+- "First key point. "
+- "Second key point. "
+- "Third key point. "
 ---
 
 # Basic typesetting
 
-We are now going to actually typeset some text. You'll need to upload the 
-[`brawl_at_allen.txt`](../data/brawl_at_allen.txt),
-[`troubadour.jpeg`](../data/troubadour.jpeg), [`battle.jpeg`](../data/battle.jpeg),
-and [`trial.jpeg`](../data/trial.jpeg) files,
-which you can download from the hyperlinks embedded here.
-
-
-We are first going to renamed the current `main.tex` document to `old.tex`;
-then, we're going to create a new document, which we will call `main.tex`. This
-time, we will actually get a blank document from Overleaf (because we didn't 
-start a new project), so we're going to have to remember the necessary parts of
-the document structure.
-
-We are renaming the old file because Overleaf will automatically compile 
-`main.tex`, even if we hit compile with a different file open in the editor; 
-otherwise, we would have to swap back and forth between files a lot.
+We are now going to introduce some commands you rcna use to format your text. Let's continue working with the main.tex file from the previous lesson.
 
 ```latex
-% in main.tex
-\documentclass{book}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{lipsum}
 
-\author{James Stephens}
-\title{Irish Fairy Tales}
-\date{}
+\title{Let's do Science!}
+\author{Your Name}
 
 \begin{document}
+
 \maketitle
 
+\section{Abstract}
+\lipsum
 
+\section{Introduction}
+\lipsum
 
 \end{document}
 ```
 
 Previously, we inserted some random text using `lipsum`, but because that is 
-generated via a command, we couldn't format it at all. To be able to do this, 
-we need to have access to the text prior to compiling the document. We have two 
-options for adding text in to our new document.
- 
-1.  We can just put the text itself into the document.
-    ```latex
-    \documentclass{book}
-    \usepackage[utf8]{inputenc}
+generated via a command, we couldn't format it at all. 
 
-    \author{James Stephens}
-    \title{Irish Fairy Tales}
-    \date{}
+You might notice that the Abstract is being enumerated (1, 2, 3...) along with the other "sections" of the article, which isn't usually how articles are formatted. In this case, LaTeX provides an environment we can use for our Abstract. Let's also remove the lipsum commands and add some text. 
+```latex
+\begin{abstract}
+	The scientific method is really cool. I mean, seriously, it is awesome!
+\end{abstract}
+``` 
 
-    \begin{document}
-    \maketitle
-
-    When the wind picked up the fire spread
-    And the grapevines seemed left for dead
-    And the northern sky looked like the end of days
-    The end of days
-
-    \end{document}
-    ```
-2. Or, we can keep the text in a separate document (like `brawl_at_allen.txt`) 
-   and use a command to insert it (similar to what we did with `lipsum`, before):
-   ```latex
-   % in main.tex
-   \documentclass{book}
-   \usepackage[utf8]{inputenc}
-
-   \author{James Stephens}
-   \title{Irish Fairy Tales}
-   \date{}
-
-   \begin{document}
-   \maketitle
-
-   \input{brawl_at_allen.tex} % this must have the file path as its argument
-
-   \end{document}
-   ```
-
-Both options have pros and cons. Keeping everything in one file means fewer
-files to deal with, but it can reach a point where finding different parts is
-difficult.
-
-Using separate files keeps any one file from becoming unwieldy, but runs the
-risk of having too many files to keep track of.
-
-The right depends on how you like to work, and the project at hand. For now,
-we'll keep the text in its own file, but we'll change its extension to `.tex`.
-
-### Formatting
-
-Sometimes you might be actively writing a document and doing formatting-type
-things as you write. This is one way to make a LaTeX document. The other is to
-take text that is already written and simply typeset it. This is what we're
-going to do now.
-
-We previously saw the `\section{}` command in our article example. Our current
-document is in the document class 'book', so we will be using variations on
-`\section{}`, called `\part{}` and `\chapter{}`. The book document class
-defaults to things like: printing front and back, different margins for even
-and odd pages, and starting every chapter on an odd page.
-
-`The Little Brawl at Allen` has three chapters, and is one of three fairy tales
-to be included in this document. Let's add a part heading with the story title,
-some chapter headings, and a Table of Contents. (I've made up some chapter
-titles to go with the story.)
-
-Chapter titles:
-* The Banquet
-* The Brawl
-* The Trial
+Let's take a look at some of the commands we can use to format text. We can format words or phrases using commands for bold, italics, underline, subscripts, superscripts and more by passing the text we want emphasized as arguments to the command:
 
 ```latex
-% in brawl_at_allen.tex
-\part{The Little Brawl at Allen}
+\begin{abstract}
+	The \textbf{scientific method} is really cool. I mean, seriously, it is \textit{awesome}! It is the 1\textsuperscript{st} method that you should use when you want to do science.
+\end{abstract}
+```
+We can add another line to our abstract and recompile:
+```latex
+\begin{abstract}
+	The scientific method is really cool. I mean, seriously, it is \emph{awesome}! Can you imagine what technology & engineering would look like without the scientific method?
+\end{abstract}
+```
 
-\chapter{The Banquet}
+The ampersand (&) disappears from the text after recompiling! That's because a number of characters are reserved in LaTeX, and if we want to include them in our text we first have to "escape" them with a backslash (\). Some of the special characters are: 
+> \# $ % ^ & _ { } ~ \. 
+
+To display the ampersand after compiling our doc, we should add a backslash before the ampersand:
+```latex
+\begin{abstract}
+	The scientific method is really cool. I mean, seriously, it is \emph{awesome}! Can you imagine what technology \& engineering would look like without the scientific method?
+\end{abstract}
+```
+### Lists
+
+Let's add some of the reasons we love the scientific method to our abstract using the ```{itemize}``` environment:
+```latex
+\begin{itemize}
+	\item It makes it less likely for bridges to collapse.
+	\item It's helpful for the creation and improvement of airplanes so we can fly to cool places.
+\end{itemize}
+```
+
+If we wanted to change it from an unordered list to a numbered/ordered list we could use the ```{enumerate}``` environment instead:
+```latex
+\begin{enumerate}
+   	\item It makes it less likely for bridges to collapse.
+   	\item It's helpful for the creation and improvement of airplanes so we can fly to cool places
+\end{enumerate}
+```
+
+> ## Document classes and sections
+Articles are not the only kinds of documents we can create in LaTeX. We could also assign document classes such as:
+> * ```\documentclass{minimal}```
+* ```\documentclass{report}```
+* ```\documentclass{slides}```
+* ```\documentclass{letter}```
+* ```\documentclass{book}```
+> 
+> Go ahead and change your document class and recompile to see how the format changes. Some commands, like ```\section```, won't work in every document class. 
+{: .callout}
+
+We can also customize the document class using options [] to add styles across the entire document.
+
+```latex
+\documentclass[12pt,letter]{article} % use 12 point font on 8.5 x 11 inch (letter) paper
+```
+
+The code above also includes a comment - all of the text after the percentage symbol - which will be ignored when the document is compiled. 
+
+We've seen how we can organize an article with \section commands. We can also add different levels of headings and sub-headings. Let's outline some of the pillars of science that we want to touch on in our introduction.
+
+```latex
+
+\section{Introduction}
+	
+\subsection{Theory}
+
+\subsection{Experiments}
+
+\subsection{Scientific Computing}
+
+\subsubsection{Algorithms}
 
 ```
 
-The `\chapter{}` command takes one argument—the chapter title. We do not need to
-give it a number; these are assigned automatically, in the order the compiler
-encounters the commands.
+### Packages for document styles
 
-Now add the other two `\chapter{}` commands. (The 'find' option might be helpful
-here.)
-
-Once all four commands have been added, we can add the `\tableofcontents`
-command in `main.tex` and the headings will automatically appear there.
+You can import packages in your LaTeX document to add functionality beyond the default LaTeX. We added some document styles to the document class above using options, but we could also import the geometry package to further customize the page layout. Import packages before the ```\begin{document}``` command with the ```\usepackage{}``` command. Let's remove the documentclass options for a 12pt font and letter paper and add an option for 1.5 inch margins using geometry.
 
 ```latex
-% in main.tex
-\begin{document}
-\maketitle
-
-\tableofcontents
+\documentclass{article}
+\usepackage[margin=1.5in]{geometry}
 
 ```
 
-The `\tableofcontents` command does not take any arguments.
-
-### Bold and italicised text and footnotes
-
-Making text bold or italicised is done using some new commands: `\textbf{}` and
-`\textit{}`. The text to be formatted is given as an argument to the command.
-
-There is a note about the text found at the beginning of Chapter 2; let's place
-that in italics to offset it more, and but the word 'Note:' in bold.
-
-```latex
-% in brawl_at_allen.tex
-\chapter{The Battle}
-
-\textbf{Note:} \textit{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}\\
-```
-
-This formatting helps differentiate the note from the rest of the text. The
-double slash at the end creates a linebreak, which physically separates the
-note from the rest of the chapter.
-
-Another option would be to place this in a footnote. This is done with the
-`\footnote{}` command. The argument will be the text of the footnote. (We could
-leave the bold/italics, but will remove them for now.)
-
-```latex
-% in brawl_at_allen.tex
-\chapter{The Battle}
-
-\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
-```
-
-This places the text of the footnote down at the bottom of the page, but the
-footnote indicator is placed a bit awkwardly. We probably actually want to have
-it appear after the chapter title.
-
-Placing the footnote command after the `}` does not fix the problem; we probably
-need to place it inside the curly braces.
-
-```latex
-% in brawl_at_allen.tex
-\chapter{The Battle\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}}
-```
-
-This throws an error. Because we didn't get it before, we know it must be a
-result of the new placement of the footnote command. LaTeX error messages can
-be hard to decipher, but in this instance the error is caused because chapter
-headings are not like regular text. Their appearance at the beginning of a
-chapter, in the Table of Contents, and in page headers is all formatted very
-specifically and including a footnote in the argument to the `\chapter{}`
-command messes some of that up.
-
-In order to resolve this, we can add an option to the `\chapter{}` command that
-specifies an alternate version of the title, without the footnote.
-
-```latex
-% in brawl_at_allen.tex
-\chapter[The Battle]{The Battle\footnote{This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}}
-  ```
-
-This option creates what is called a *chaptermark* for *The Battle* that doesn't
-include the footnote. Chapter- and sectionmarks are used in the Table of 
-Contents and in page headers. While we are using it to accommodate a footnote,
-they can also be used to provide shortened versions of long titles.
-
-
-> ##  Challenge 1
->
-> Decide which of these are valid ways to input text into a document:
->
-> 1. 
+> ## Quote marks
+> Adding quotations to your text in a LaTeX document can be challenging. Copying quote marks from other documents is likely to create errors, or show up as weird characters in your text. To add left and right quote marks in LaTeX it's best to add two grave accents (to the left of the 1 key) as your left quote mark and two single quotes (to the left of the Return/Enter key) as your right quote:
 > ```latex
-> \section{Lyrics}
-> When the wind picked up the fire spread
-> And the grapevines seemed left for dead
-> And the northern sky looked like the end of days
-> The end of days
+> \section{Introduction}
+> A ``quote'' in a phrase works like this.
+> Using "double quotes" will look bad.
+> ``To add a `quote' in a quote you should add the double grave and single quotes outside of a single grave and single quote mark.''
 > ```
-> 1. 
-> ```latex
-> \section{Lyrics}
-> \input{grapevine_fires.tex}
-> ```
-> 1. 
-> ```latex
-> \section{Lyrics}
-> \insert{grapevine_fires.tex}
-> ```
-> 1. 
-> ```latex
-> \section{Lyrics}
-> \include{grapevine_fires.tex}
-> ```
->
-> > ## Answer
-> >
-> > All of these are valid, except for `\insert{grapevine_fires.tex}`.
-> >
-> > The first option just places the text where it is typed.
-> >
-> > The second, is what we have used above to insert `brawl_at_allen.tex` into our document.
-> >
-> > We have not encountered `\include{}` in this lesson, but it is valid, so 
-> > it's a bit of a trick option. Functionally, `\include{}` works similarly to 
-> > `\input{}`, although it creates additional pagebreaks.
-> > {: .tex}
-> {: .solution}
-{: .challenge}
->
->
-> ## Challenge 2
-> `\textbf{}` and `\textit{}` are *commands* that change the style of text.
-> There is another way to tell LaTeX that text should be bold or italicised;
-> this is with the `\bfseries` and `\itshape` *declarations*. Declarations
-> do not take an argument, instead, they modify all of the text that follows
-> them, or is within their *environment*.
->
-> Try inserting one of these declarations just after the `\begin{document}`
-> line and observe what happens.
->
-> Once you have, place the declaration inside of curly braces, as if it were the
-> argument for a command, and adding some text after it:
->
-> ```latex
-> {\itshape  War with the Newts}
-> ```
->
-> Now, the declaration only affects the text inside the curly braces.
->
->
-> ## Challenge 3
-> Use the `\itshape` and `\bfseries` declarations to typeset the note at
-> the beginning of Chapter 2; (you can leave the footnote we created as it is
-> and just make this new version appear below the chapter title).
->
-> > ## Answer
-> > ```latex
-> > % in brawl_at_allen.tex
-> > {\bfseries Note}{\itshape This version of the death of Uail is not correct. Also Cnocha is not in Lochlann but in Ireland.}
-> > ```
-> > {: .tex}
-> {: .solution}
-{: .challenge}
+> Add regular quotes to your document and compile to see what they look like. Now try to add the grave accents and single quotes to compare. 
+{: .callout}
+
+
