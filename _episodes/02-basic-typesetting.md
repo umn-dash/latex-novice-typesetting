@@ -3,15 +3,8 @@ title: "Text Formatting"
 teaching: 0
 exercises: 0
 questions:
-- "Key question: "
-- "Key question: "
-objectives:
-- "First learning objective."
-- "Second learning objective. "
-keypoints:
-- "First key point. "
-- "Second key point. "
-- "Third key point. "
+- "Key question: How can I format text within a LaTeX document?"
+- "Key question: How can I use different styles and classes of documents?"
 ---
 
 # Basic typesetting
