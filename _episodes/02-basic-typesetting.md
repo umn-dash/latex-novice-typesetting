@@ -141,7 +141,7 @@ We've seen how we can organize an article with \section commands. We can also ad
 
 ### Math typesetting
 One of the primary advantages to using LaTeX, as opposed to other typesetting software, is its ability to format mathematical equations. 
-You can use dollar signs to set apart formulas in your text, or use the '''equation''' environment to create larger displays. 
+You can use dollar signs to set apart formulas in your text, or use the ```equation``` environment to create larger displays. 
 
 ```latex
 Einstein discovered $e=mc^2$.
@@ -151,7 +151,7 @@ a^2 + b^2 = c^2
 \end{equation}
 
 ```
-Many of the reserved characters we noted above can be used in LaTeX within the math environments. So these symbols will display correctly when set apart using the dollar signs or {equation} environment:
+Many of the reserved characters we noted above can be used in LaTeX within the math environments. So these symbols will display correctly when set apart using the dollar signs or ```{equation}``` environment:
 
 ```latex
 + - = ! / ( ) [ ] < > | ' : *
@@ -160,6 +160,6 @@ Many of the reserved characters we noted above can be used in LaTeX within the m
 Some other commonly used characters and tips for equations:
 - the carat symbol (^) for powers/superscripts
 - underscore (\_) for subscripts
-- '''\alpha \gamma \delta''' render the greek letters by cased name
+- ```\alpha \gamma \delta``` render the greek letters by cased name
 
-There are a lot of potential formatting choices to make when building your formulas. The American Mathematical Society's [Short Math Guide for LaTeX](http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf) is one good introduction. 
+There are a lot of potential formatting choices to make when building your formulas. Wikipedia's [LaTeX/Mathematics page](https://en.wikibooks.org/wiki/LaTeX/Mathematics) is a good quick reference, while The American Mathematical Society's [Short Math Guide for LaTeX](http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf) goes into a little more detail. 
