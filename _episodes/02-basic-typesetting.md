@@ -139,4 +139,27 @@ We've seen how we can organize an article with \section commands. We can also ad
 > Add regular quotes to your document and compile to see what they look like. Now try to add the grave accents and single quotes to compare. 
 {: .callout}
 
+### Math typesetting
+One of the primary advantages to using LaTeX, as opposed to other typesetting software, is its ability to format mathematical equations. 
+You can use dollar signs to set apart formulas in your text, or use the '''equation''' environment to create larger displays. 
 
+```latex
+Einstein discovered $e=mc^2$.
+
+\begin{equation}
+a^2 + b^2 = c^2
+\end{equation}
+
+```
+Many of the reserved characters we noted above can be used in LaTeX within the math environments. So these symbols will display correctly when set apart using the dollar signs or {equation} environment:
+
+```latex
++ - = ! / ( ) [ ] < > | ' : *
+```
+
+Some other commonly used characters and tips for equations:
+- the carat symbol (^) for powers/superscripts
+- underscore (\_) for subscripts
+- '''\alpha \gamma \delta''' render the greek letters by cased name
+
+There are a lot of potential formatting choices to make when building your formulas. The American Mathematical Society's [Short Math Guide for LaTeX](http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf) is one good introduction. 
