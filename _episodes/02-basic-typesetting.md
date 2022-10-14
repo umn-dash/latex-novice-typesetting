@@ -159,21 +159,44 @@ Many of the reserved characters we noted above can be used in LaTeX within the m
 
 Some other commonly used characters and tips for equations:
 - the carat symbol (^) for powers/superscripts
-- underscore (\_) for subscripts
+- underscore for subscripts
 - ```\alpha \gamma \delta``` render the greek letters by cased name
 
+It's also quite common to use commands that take values as parameters to present equation symbols. For example ```\sqrt{}``` for displaying square roots, ```\sum{}``` for the sum symbol, and ```\int{}``` for the integral symbol. 
+
+```latex
+$\sqrt{4}$
+
+$\sum{P(i,j)}$
+
+$\int_0^\infty$
+```
 There are a lot of potential formatting choices to make when building your formulas. Wikipedia's [LaTeX/Mathematics page](https://en.wikibooks.org/wiki/LaTeX/Mathematics) is a good quick reference, while The American Mathematical Society's [Short Math Guide for LaTeX](http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf) goes into a little more detail. 
 
 
 > ## Challenge 1
 >
-> Using Wikipedia's quick guide, how would you render fraction 5/8? 
+> Using Wikipedia's quick guide, how would you render the fraction 5/8? 
 > 
 >
 > > ## Answer
-> >'''latex
+> >```latex
 > >\frac{5}{8}
-> >'''
+> >```
+> > {: .tex}
+> {: .solution}
+{: .challenge}
+>
+>
+> ## Challenge 2
+>
+> How would you format the square root of a over b?
+> ![equation for square root of a over b](https://wikimedia.org/api/rest_v1/media/math/render/svg/aa0aee8692897b7ee635498e8c34d4531da3e346)
+>
+> > ## Answer
+> >```latex
+> >\sqrt{\frac{a}{b}}
+> >```
 > > {: .tex}
 > {: .solution}
 {: .challenge}
