@@ -163,3 +163,19 @@ Some other commonly used characters and tips for equations:
 - ```\alpha \gamma \delta``` render the greek letters by cased name
 
 There are a lot of potential formatting choices to make when building your formulas. Wikipedia's [LaTeX/Mathematics page](https://en.wikibooks.org/wiki/LaTeX/Mathematics) is a good quick reference, while The American Mathematical Society's [Short Math Guide for LaTeX](http://tug.ctan.org/info/short-math-guide/short-math-guide.pdf) goes into a little more detail. 
+
+
+> ## Challenge 1
+>
+> Using Wikipedia's quick guide, how would you render fraction 5/8? 
+> 
+>
+> > ## Answer
+> >'''latex
+> >\frac{5}{8}
+> >'''
+> > {: .tex}
+> {: .solution}
+{: .challenge}
+>
+>
