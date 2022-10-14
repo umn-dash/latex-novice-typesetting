@@ -16,7 +16,7 @@ keypoints:
 
 # Basic typesetting
 
-We are now going to introduce some commands you rcna use to format your text. Let's continue working with the main.tex file from the previous lesson.
+We are now going to introduce some commands you can use to format your text. Let's continue working with the main.tex file from the previous lesson.
 
 ```latex
 \documentclass{article}
@@ -40,9 +40,10 @@ We are now going to introduce some commands you rcna use to format your text. Le
 ```
 
 Previously, we inserted some random text using `lipsum`, but because that is 
-generated via a command, we couldn't format it at all. 
+generated via a command, we couldn't format the text itself. Let's remove the lipsum command from our document and start adding some format-able text instead.  
 
-You might notice that the Abstract is being enumerated (1, 2, 3...) along with the other "sections" of the article, which isn't usually how articles are formatted. In this case, LaTeX provides an environment we can use for our Abstract. Let's also remove the lipsum commands and add some text. 
+You might notice that the Abstract is being enumerated (1, 2, 3...) along with the other "sections" of the article, which isn't usually how articles are formatted. In this case, LaTeX provides an environment we can use for our Abstract. Delete the \section{Abstract} command, and create a new Abstract environment instead:
+
 ```latex
 \begin{abstract}
 	The scientific method is really cool. I mean, seriously, it is awesome!
@@ -59,17 +60,17 @@ Let's take a look at some of the commands we can use to format text. We can form
 We can add another line to our abstract and recompile:
 ```latex
 \begin{abstract}
-	The scientific method is really cool. I mean, seriously, it is \emph{awesome}! Can you imagine what technology & engineering would look like without the scientific method?
+	The \textbf{scientific method} is really cool. I mean, seriously, it is \textit{awesome}! It is the 1\textsuperscript{st} method that you should use when you want to do science. Can you imagine what technology & engineering would look like without the scientific method?
 \end{abstract}
 ```
 
-The ampersand (&) disappears from the text after recompiling! That's because a number of characters are reserved in LaTeX, and if we want to include them in our text we first have to "escape" them with a backslash (\). Some of the special characters are: 
+Notice that the ampersand (&) disappears from the text after recompiling! That's because a number of characters are reserved in LaTeX, and if we want to include them in our text we first have to "escape" them with a backslash (\). Some of those special characters are: 
 > \# $ % ^ & _ { } ~ \. 
 
-To display the ampersand after compiling our doc, we should add a backslash before the ampersand:
+To display the ampersand after compiling our doc, we should add a backslash as an "escape character" before the ampersand:
 ```latex
 \begin{abstract}
-	The scientific method is really cool. I mean, seriously, it is \emph{awesome}! Can you imagine what technology \& engineering would look like without the scientific method?
+	The \textbf{scientific method} is really cool. I mean, seriously, it is \textit{awesome}! It is the 1\textsuperscript{st} method that you should use when you want to do science. Can you imagine what technology \& engineering would look like without the scientific method?
 \end{abstract}
 ```
 ### Lists
@@ -109,6 +110,16 @@ We can also customize the document class using options [] to add styles across t
 
 The code above also includes a comment - all of the text after the percentage symbol - which will be ignored when the document is compiled. 
 
+### Packages for document styles
+
+You can import packages in your LaTeX document to add functionality beyond the default LaTeX. We added some document styles to the document class above using options, but we could also import the geometry package to further customize the page layout. Import packages before the ```\begin{document}``` command with the ```\usepackage{}``` command. Let's remove the documentclass options for a 12pt font and letter paper and add an option for 1.5 inch margins using geometry.
+
+```latex
+\documentclass{article}
+\usepackage[margin=1.5in]{geometry}
+
+```
+### Sections & subsections
 We've seen how we can organize an article with \section commands. We can also add different levels of headings and sub-headings. Let's outline some of the pillars of science that we want to touch on in our introduction.
 
 ```latex
@@ -124,17 +135,6 @@ We've seen how we can organize an article with \section commands. We can also ad
 \subsubsection{Algorithms}
 
 ```
-
-### Packages for document styles
-
-You can import packages in your LaTeX document to add functionality beyond the default LaTeX. We added some document styles to the document class above using options, but we could also import the geometry package to further customize the page layout. Import packages before the ```\begin{document}``` command with the ```\usepackage{}``` command. Let's remove the documentclass options for a 12pt font and letter paper and add an option for 1.5 inch margins using geometry.
-
-```latex
-\documentclass{article}
-\usepackage[margin=1.5in]{geometry}
-
-```
-
 > ## Quote marks
 > Adding quotations to your text in a LaTeX document can be challenging. Copying quote marks from other documents is likely to create errors, or show up as weird characters in your text. To add left and right quote marks in LaTeX it's best to add two grave accents (to the left of the 1 key) as your left quote mark and two single quotes (to the left of the Return/Enter key) as your right quote:
 > ```latex
