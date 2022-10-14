@@ -68,7 +68,7 @@ If we look at the different parts of this document, starting at the top, we see:
 
 1. the document class declaration (this document is an article)
 2. the preamble
-  * a package import statement (this package is used in almost everything; it specifies the unicode character set to use)
+  * a package import statement (the inputenc package is used in almost everything; it specifies the unicode character set to use. in our case we're using utf8)
   * some metadata — this includes the title and author
 3. the document body
   * the document environment `\begin{}` statement
