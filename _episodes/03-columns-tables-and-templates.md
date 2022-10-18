@@ -3,8 +3,9 @@ title: "Columns, Tables, and Templates"
 teaching: 0
 exercises: 0
 questions:
-- "Key question: "
-- "Key question: "
+- "Key question: How can I add tabular data to a LaTeX document?"
+- "Key question: How can I organize my text into columns?"
+- "Key question: How can I use existing LaTeX templates to style my document in accordance with publisher or organization guidelines?
 objectives:
 - "First learning objective. "
 - "Second learning objective. "
@@ -16,15 +17,15 @@ keypoints:
 - "Fourth key point. "
 ---
 
-### Figures
+### Tables & tabular data
 
-We've now got a pretty reasonable-looking document. Let's see about adding some images.
+Manually marking up tables in a LaTeX document can be a time-consuming task. It's often a better bet to begin by exporting your tabular data from another source and then copying/pasting the LaTeX code that those tools generate into your LaTeX document. You can generate LaTeX tables, for example, using:
+- .to_latex() in pandas/Python
+- stargazer for R
+- excel2latex for Excel
+- tablesgenerator.com and latex-tables.com are two online tools for generating LaTeX table markup
 
-We're going to be using a command called `\includegraphcs[]{}`. It can take many different
-options, and requires one argument—the path to the image file. This command comes from the
-`graphicx` package, which we will also need to include.
 
-In Chapter 1, *The Banquet*, we are going to add `troubadour.jpeg`.
 
 ```latex
 % in brawl_at_allen.tex
@@ -37,21 +38,6 @@ In Chapter 1, *The Banquet*, we are going to add `troubadour.jpeg`.
 \includegraphics[]{troubadour}
 ```
 
-When this is rendered, the image should appear, but its placement is not going to be
-ideal. Inserting an image in this way means that the image must appear before any of
-the text in Chapter 1, **no matter what; even if it makes the document look ugly.**
-
-If we don't want this rigid behaviour, we can use a new environment, called a `float`.
-Floats come in two flavours: `figure`, and `table`. We will use the `figure` version.
-
-The `figure` environment requires a `\begin{}` and `\end{}` statement, just like the
-`document` environment. Overleaf will autofill some of the different parts of this, as well.
-
-The image will be automatically centred with `\centering`, and caption and label commands
-will also appear; these are optional, but helpful. The caption can be given a short
-description of the image as an argument; the label makes it possible to cross-reference
-the image in the text. We'll look at cross-references later on. For now, you can leave the
-label as the default, or pick something short and descriptive.
 
 ```latex
 \begin{figure}
@@ -62,112 +48,11 @@ label as the default, or pick something short and descriptive.
 \end{figure}
 ```
 
-Now, when the document is compiled, the figure will fit into the document more naturally.
-
-Now let's add in a figure to Chapter 2. This time the image will be `battle.jpeg`.
-
-```latex
-% in story.tex
-\begin{figure}
-    \centering
-    \includegraphics[]{battle}
-    \caption{The battle}
-    \label{fig:battle}
-\end{figure}
-```
-When we compile this, the image is too big for the page. We need to use an option with
-`\includegraphics` to specify the width.
-
-```latex
-% in story.tex
-\begin{figure}
-    \centering
-    \includegraphics[width = \textwidth]{battle}
-    \caption{The battle}
-    \label{fig:battle}
-\end{figure}
-```
-
-`\textwidth` will scale the image size down so that the width is equal to the width of the text
-in the document.
-
-Finally, we can add the `trial.jpeg` image to Chapter 3. This image is very wide, so it would
-be nice to have it rotated, so it fits better on the page. For this, we will need to add a new
-package: `lscape`.
 
 
-```latex
-\usepackage{lipsum}
-\usepackage{graphicx}
-\usepackage{lscape}
-```
+## Columns
 
-This package gives us a new environment, called `landscape`. We need to place the entire figure
-environment within it.
-
-```latex
-\chapter{The Trial}
-
-\begin{landscape} 
-\begin{figure}
-    \centering
-    \includegraphics[]{trial}
-    \caption{The trial}
-    \label{fig:trial}
-\end{figure}
-\end{landscape}
-```
-
-It looks like we may also need to scale this image down a bit. Experiment with different sizes.
-
-```latex
-\chapter{The Trial}
-
-\begin{landscape} 
-\begin{figure}
-    \centering
-    \includegraphics[width = \textwidth]{trial}
-    \caption{The trial}
-    \label{fig:trial}
-\end{figure}
-\end{landscape}
-```
-THe image seems to be a bit smaller than we might have expected; this is because `\textwidth` does
-not change with the switch to landscape. We probably want to set the height to `\textwidth`, instead.
-
-```latex
-\chapter{The Trial}
-
-\begin{landscape}
-\begin{figure}
-    \centering
-    \includegraphics[height=\textwidth]{trial}
-    \caption{The trial}
-    \label{fig:trial}
-\end{figure}
-\end{landscape}
-```
-
-This looks better, but the header has now disappeared (because the image is slightly too large to fit
-on one page). We can make it fit by placing a scaling factor in front of `\textwidth`. This will
-effectively be multiplied against `\textwidth` to produce the actual width.
-
-```latex
-\chapter{The Trial}
-
-\begin{landscape}
-\begin{figure}
-    \centering
-    \includegraphics[height=.8\textwidth]{trial}
-    \caption{The trial}
-    \label{fig:trial}
-\end{figure}
-\end{landscape}
-```
-
-## Math typesetting
-
-## Tabular data
+## LaTeX templates
 
 > ## Challenge 1
 >
