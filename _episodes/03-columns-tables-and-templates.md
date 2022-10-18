@@ -20,8 +20,8 @@ keypoints:
 ### Tables & tabular data
 
 Manually marking up tables in a LaTeX document can be a time-consuming task. It's often a better idea to begin by exporting your tabular data from another source and then copying/pasting the LaTeX code that those tools generate into your LaTeX document. You can generate LaTeX tables using tools like:
-- .to_latex() in pandas/Python
-- stargazer for R
+- [.to_latex()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_latex.html) in pandas/Python
+- [stargazer for R](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
 - excel2latex for Excel
 - tablesgenerator.com 
 - latex-tables.com 
@@ -36,7 +36,7 @@ cell 2a & cell 2b & cell 2c
 
 ```
 
-We can add some borders to the table using pipes (|) in between our column parameters and horizontal lines with `\hline` rules between the row content. 
+Add borders to the table using pipes (|) in between your column parameters and horizontal lines with `\hline` rules between the row content. 
 
 ```latex
 \begin{tabular}{| c | c | c |}
@@ -66,9 +66,19 @@ cell 2a & cell 2b & cell 2c \\
 \label{table:1}
 \end{table}
 ```
-Overleaf provides a more in-depth (introduction to tables LaTeX)[https://www.overleaf.com/learn/latex/Tables#Creating_a_simple_table_in_LaTeX]. 
+Overleaf provides a more in-depth [introduction to tables LaTeX](https://www.overleaf.com/learn/latex/Tables#Creating_a_simple_table_in_LaTeX). 
 
 ## Columns
+
+It's relatively easy to create a two column LaTeX document, by adding a `twocolumn` parameter to your document class statement. 
+
+```latex
+\documentclass[twocolumn]{article}
+```
+
+To work with more than two columns at a time, you can import the `multicol` package and use the `multicols` environment within your document.
+
+OverLeaf's [introduction to Multiple Columns](https://www.overleaf.com/learn/latex/Multiple_columns) goes into greater depth on the many ways to set up different column options in your document. 
 
 ## LaTeX templates
 
