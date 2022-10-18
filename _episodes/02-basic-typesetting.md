@@ -104,16 +104,6 @@ We can also customize the document class using options [] to add styles across t
 
 The code above also includes a comment - all of the text after the percentage symbol - which will be ignored when the document is compiled. 
 
-> ### Packages for document styles
-> You can import packages in your LaTeX document to add functionality beyond the default LaTeX. We added some document styles to the document class above using options, but one could also import the geometry package to further customize the page layout. To do so, import packages before the ```\begin{document}``` command with the ```\usepackage{}``` command. For example, you could remove the documentclass options for a 12pt font and letter paper and add an option for 1.5 inch margins using geometry.
-> 
-> ```latex
-\documentclass{article}
-\usepackage[margin=1.5in]{geometry}
-
-```
-{: .callout}
-
 ### Sections & subsections
 We've seen how we can organize an article with \section commands. We can also add different levels of headings and sub-headings. Let's outline some of the pillars of science that we want to touch on in our introduction.
 
