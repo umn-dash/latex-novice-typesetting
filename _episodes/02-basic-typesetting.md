@@ -5,7 +5,7 @@ exercises: 0
 questions:
 - "Key question: How can I format text within a LaTeX document?"
 - "Key question: How can I use different styles and classes of documents?"
-- - "Key question: How can I use different styles and classes of documents?"
+- "Key question: How can I style mathematical equations in LaTeX?"
 ---
 
 # Basic typesetting
