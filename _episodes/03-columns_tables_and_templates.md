@@ -1,19 +1,19 @@
 ---
-title: "Figures, math and tables"
+title: "Columns, Tables, and Templates"
 teaching: 0
 exercises: 0
 questions:
-- "Key question: How can I add images to my document?"
-- "Key question: How does image placement interact with the surrounding text?"
+- "Key question: "
+- "Key question: "
 objectives:
-- "First learning objective. Place an image at a fixed location."
-- "Second learning objective. Learn the difference between fixed and floating images."
-- "Third learning objective. See how to use options to change how inserted images appear."
+- "First learning objective. "
+- "Second learning objective. "
+- "Third learning objective. "
 keypoints:
-- "First key point. Including an image requires the use of a command, and possibly a `figure` environment, an the specification of the path to the image (which may be more than just the filename, if the image is in a subdirectory)."
-- "Second key point. Floats are placed by LaTeX in locations that will look nice; this is determined by a set of rules (that can be modified, if one is so inclined)."
-- "Third key point. The appearance of images can be customised using options to `\\includegraphics{}`."
-- "Fourth key point. Captions are short descriptions of an image. Labels are a way to refer to them within the text."
+- "First key point. "
+- "Second key point."
+- "Third key point. "
+- "Fourth key point. "
 ---
 
 ### Figures
