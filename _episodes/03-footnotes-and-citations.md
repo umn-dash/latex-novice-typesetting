@@ -3,16 +3,17 @@ title: "Citations and BibTex"
 teaching: 0
 exercises: 0
 questions:
-- "Key question:"
-- "Key question:"
+- "Key question: How can I add footnotes and bibliographies to a LaTeX document?"
+- "Key question: How can I use BibTeX to organize citations for larger projects?"
 objectives:
-- "First learning objective. "
-- "Second learning objective. "
-- "Third learning objective. "
+- "First learning objective. Learn how to place references within the text of a scholarly article."
+- "Second learning objective. Learn how to associate references in the text with citations organized in a BibTex file."
+- "Third learning objective. Learn how to generate a bibliography from the citations in BibTex."
 keypoints:
-- "First key point. "
-- "Second key point. "
-- "Third key point. "
+- "First key point. You can manually add footnotes inline with the text using the `\footnote{}` command."
+- "Second key point. BibTeX is a file format that allows you to keep track of citation data separately from your main LaTeX document."
+- "Third key point. You can reference citations in a BibTeX file using the `biblatex` package."
+- "Fourth key point. You can change the citation style used in `biblatex` by passing the `[style=...]` option."
 ---
 
 ## Footnotes
