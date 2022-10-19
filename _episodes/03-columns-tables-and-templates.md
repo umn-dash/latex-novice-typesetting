@@ -108,7 +108,7 @@ Many publishers share document templates for authors in various formats such as 
 IEEE, for example, [provides detailed instructions](https://mirrors.concertpass.com/tex-archive/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf) on how to use the IEEEtran LaTeX class to produce conference and journal submissions to IEEE. 
 
 
-
+> ### IEEE Journal Template
 > Let's use the [IEEE Template Selector](https://template-selector.ieee.org) to choose a LaTeX template for a specific journal.
 > 
 > 1. Choose Transactions, Journals, and Letters
@@ -121,35 +121,4 @@ IEEE, for example, [provides detailed instructions](https://mirrors.concertpass.
 > If you scroll through the compiled document you'll see many examples of formatted equations, tables, bullet lists, and much more. You can use the `File outline` in the bottom left corner of Overleaf to jump to different sections of the LaTeX document to see how different content in marked up to follow the IEEE journal style. 
 {: .callout}
 
-> ## Challenge 1
->
-> Will this code insert an image at a fixed location, or one whose location is flexible?
->
-> ```latex
-> \includegraphics[scale=.7]{constellations}
-> ```
->
-> > ## Answer
-> > This code will insert an image whose location is fixed because it is not inside a floating environment.
-> > {: .tex}
-> {: .solution}
-{: .challenge}
-
->
-> ## Challenge 2
-> `\includegraphics[]{}` has many different options it can take. Apply the `angle` option to the first image
-> we added; its value should be a whole number between 0 and 360. You can also try this with the other images;
-> multiple options are specified as a comma-separated list.
->
-> > ## Answer
-> > ```latex
-> > \begin{figure}
-> >     \centering
-> >     \includegraphics[angle=30]{troubadour}
-> >     \caption{A troubadour, performing}
-> >     \label{fig:troubadour}
-> > \end{figure}
-> > ```
-> > {: .tex}
-> {: .solution}
-{: .challenge}
+Note: The University of Minnesota doesn't have an official LaTeX template for PhD thesis formatting. There is [a user-created template on GitHub](https://github.com/agude/UMN-PhD-Thesis-Template) but it requires you to build the thesis locally on your command line or to use GitHub Actions to create a thesis PDF on GitHub from your LaTeX files. Unfortunately, this template wouldn't work (without significant adaptation) on Overleaf or other LaTeX editors.
