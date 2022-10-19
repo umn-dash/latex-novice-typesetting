@@ -76,11 +76,47 @@ It's relatively easy to create a two column LaTeX document, by adding a `twocolu
 \documentclass[twocolumn]{article}
 ```
 
-To work with more than two columns at a time, you can import the `multicol` package and use the `multicols` environment within your document.
+To work with more than two columns at a time, you can import the `multicol` package and use the `multicols` environment within your document. In curly brackets following the multicols environment \begin command you can enter the number of columns, and in square brackets you can add any column headers you want to include in between square brackets.
+
+```latex
+\usepackage{multicol}
+\documentclass{article}
+
+\begin{multicols}{3}
+[
+\section{Methodology}
+]
+\lipsum
+
+\end{multicols}
+
+```
+
+We can add a `\setlength` command in the document preamble passing the `\columnsep` parameter with the amount of separation we'd like to see between the columns below. Here's a list of lengths and units you can use in LaTeX. 
+
+```latex
+\setlength{\columnsep}{.75cm}
+
+```
 
 OverLeaf's [introduction to Multiple Columns](https://www.overleaf.com/learn/latex/Multiple_columns) goes into greater depth on the many ways to set up different column options in your document. 
 
 ## LaTeX templates
+
+Many publishers share document templates for authors in various formats such as Word and, increasingly in the sciences, LaTeX. A great way to learn more about LaTeX is to actually import a LaTeX template in Overleaf and notice the packages and formatting that is built in to the document. 
+
+IEEE, for example, [provides detailed instructions](https://mirrors.concertpass.com/tex-archive/macros/latex/contrib/IEEEtran/IEEEtran_HOWTO.pdf) on how to use the IEEEtran LaTeX class to produce conference and journal submissions to IEEE. 
+
+Let's use the [IEEE Template Selector](https://template-selector.ieee.org) to choose a LaTeX template for a specific journal.
+
+1. Choose Transactions, Journals, and Letters
+2. Select the first publication from the list, Canadian Journal of Electrical and Computer Engineering.
+3. Choose Original Research and Brief
+4. Select the LaTeX file format, and Download the template. 
+5. Unzip the folder, and upload the `bare_jrnl_new_sample4.tex` file into Overleaf. 
+7. Select the file in Overleaf and choose the Recompile button to view the conference paper template. 
+
+If you scroll through the compiled document you'll see many examples of formatted equations, tables, bullet lists, and much more. You can use the `File outline` in the bottom left corner of Overleaf to jump to different sections of the LaTeX document to see how different content in marked up to follow the IEEE journal style. 
 
 > ## Challenge 1
 >
