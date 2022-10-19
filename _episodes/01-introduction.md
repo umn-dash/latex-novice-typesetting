@@ -1,7 +1,7 @@
 ---
 title: "Introduction"
-teaching: 0
-exercises: 0
+teaching: 10
+exercises: 5
 questions:
 - "Key question: What is LaTeX used for?"
 - "Key question: How can I create a new typeset document?"
@@ -24,8 +24,8 @@ LaTeX is written like a mark-up language, meaning that formatting (including bol
 
 In order to produce the actual document, this mark-up text must be *compiled*. Errors in the mark-up can either be non-fatal, meaning the document will compile with some warnings; or fatal, meaning the document will fail to compile.
 
-### How do you say it?
-> Not like the rubbery substance - LAY-teks - but it's usually pronounced LAH-tekh or LAY-tekh.
+> ### How do you say it?
+> Not like the rubbery substance - LAY-teks - it's usually pronounced LAH-tekh or LAY-tekh.
 
 ## Our first LaTeX document
 We'll start by creating a new, 'blank', file in Overleaf. You'll notice that its idea of a blank file is not actually an empty one.
@@ -66,19 +66,19 @@ The `\begin{}` and `\end{}` commands delineate an *environment*. We'll see more 
 ### Looking at our document
 If we look at the different parts of this document, starting at the top, we see:
 
-1. the document class declaration (this document is an article)
-2. the preamble
-  * a package import statement (the inputenc package is used in almost everything; it specifies the unicode character set to use. in our case we're using utf8)
-  * some metadata — this includes the title and author
-3. the document body
-  * the document environment `\begin{}` statement
+1. The document class declaration. This document is an article.
+2. The preamble
+  * A package import statement. The `inputenc` package is used in almost everything; it specifies the unicode character set to use. In our case we're using `utf8`.
+  * Some metadata. This includes the title and author
+3. The document body
+  * The document environment `\begin{}` statement
     * the `\maketitle` command
     * a section heading  
     * the document environment `\end{}` statement
 
 Some of these are absolutely necessary:
 
-* the document class declaration (this document is an article)
+* the document class declaration 
 * the document environment `begin{}` statement
 * the document environment `end{}` statement
 
@@ -87,7 +87,7 @@ Without these, the document will not compile.
 ### Let's make this document a bit more interesting
 Now we're going to add in some dummy text to get a sense of what a more-complete document would look like.
 
-We'll do this using the `lipsum` package, which provides sample text blocks. We'll need to add a new `\usepackage{}` command to the document preamble and the `\lipsum` command underneath our section title.
+We'll do this using the lipsum package, which provides sample text blocks. We'll need to add a new `\usepackage{}` command to the document preamble and the `\lipsum` command underneath our section title.
 
 
 ```latex
