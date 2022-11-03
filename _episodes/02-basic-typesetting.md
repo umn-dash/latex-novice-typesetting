@@ -14,9 +14,9 @@ objectives:
 - "Create equations and use mathematical notation."
 keypoints:
 - "Sections are delineated by `\\section` and automatically numbered. Subsections can be added with the `\\subsection` command."
-- "`\\textbf{}` and `\\textit{}` can be used to bold and italicize text by taking in text as an argument."
+- "The commands `\\textbf{}` and `\\textit{}` can be used to bold and italicize text by taking in text as an argument."
 - "Lists can be created using the `itemize` environment, and numbered lists can be created using the `enumerate` environment."
-- "Document types are specified by the `\\documentclass{}`, and can be customized using options added as arguments in `[]`. 
+- "Document types are specified by the `\\documentclass{}`, and can be customized using options added as arguments in `[]`." 
 - "Math typesetting can be used in-line with the text by surrounding formulas with dollar signs, or separately using the `equation` environment."
 ---
 
