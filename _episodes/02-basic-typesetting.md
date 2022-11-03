@@ -3,14 +3,26 @@ title: "Text Formatting"
 teaching: 25
 exercises: 10
 questions:
-- "Key question: How can I format text within a LaTeX document?"
-- "Key question: How can I use different styles and classes of documents?"
-- "Key question: How can I style mathematical equations in LaTeX?"
+- "How can I format text within a LaTeX document?"
+- "How can I use different styles and classes of documents?"
+- "How can I style mathematical equations in LaTeX?"
+objectives:
+- "Create headings, sections, and subsections."
+- "Learn to bold, italicize, and format text."
+- "Create lists."
+- "Create different classes of documents and use different stypes with them."
+- "Create equations and use mathematical notation."
+keypoints:
+- "Sections are delineated by `\\section` and automatically numbered. Subsections can be added with the `\\subsection` command."
+- "`\\textbf{}` and `\\textit{}` can be used to bold and italicize text by taking in text as an argument."
+- "Lists can be created using the `\{itemize}` environment, and numbered lists can be created using the `\{enumerate}` environment."
+- "Document types are specified by the `\\documentclass{}`, and can be customized using options added as arguments in `[]`. 
+- "Math typesetting can be used in-line with the text by surrounding formulas with `$ $`, or separately using the `\{equation}` environment."
 ---
 
 # Basic typesetting
 
-We are now going to introduce some commands you can use to format your text. Let's continue working with the main.tex file from the previous lesson.
+We are now going to introduce some commands you can use to format your text. Let's continue working with the `main.tex` file from the previous lesson.
 
 ```latex
 \documentclass{article}
@@ -91,7 +103,7 @@ Articles are not the only kinds of documents we can create in LaTeX. We could al
 > Go ahead and change your document class and recompile to see how the format changes. Some commands, like ```\section```, won't work in every document class. 
 {: .callout}
 
-We can also customize the document class using options [] to add styles across the entire document.
+We can also customize the document class using *options* `[]` to add styles across the entire document:
 
 ```latex
 \documentclass[12pt,letter]{article} % use 12 point font on 8.5 x 11 inch (letter) paper
@@ -100,7 +112,7 @@ We can also customize the document class using options [] to add styles across t
 The code above also includes a comment - all of the text after the percentage symbol - which will be ignored when the document is compiled. 
 
 ### Sections & subsections
-We've seen how we can organize an article with \section commands. We can also add different levels of headings and sub-headings. Let's outline some of the pillars of science that we want to touch on in our introduction.
+We've seen how we can organize an article with `\section` commands. We can also add different levels of headings and sub-headings. Let's outline some of the pillars of science that we want to touch on in our Introduction section:
 
 ```latex
 
@@ -116,7 +128,7 @@ We've seen how we can organize an article with \section commands. We can also ad
 
 ```
 > ## Quote marks
-> Adding quotations to your text in a LaTeX document can be challenging. Copying quote marks from other documents is likely to create errors, or show up as weird characters in your text. To add left and right quote marks in LaTeX it's best to add two grave accents (to the left of the 1 key) as your left quote mark and two single quotes (to the left of the Return/Enter key) as your right quote:
+> Adding quotations to your text in a LaTeX document can be challenging. Copying quote marks from other documents is likely to create errors, or show up as weird characters in your text. To add left and right quote marks in LaTeX it's best to add two grave accents (to the left of the "1" key) as your left quote mark and two single quotes (to the left of the "Return/Enter" key) as your right quote:
 > ```latex
 > \section{Introduction}
 > A ``quote'' in a phrase works like this.
@@ -140,18 +152,20 @@ a^2 + b^2 = c^2
 \end{equation}
 
 ```
-Many of the reserved characters we noted above can be used in LaTeX within the math environments. So these symbols will display correctly when set apart using the dollar signs or ```{equation}``` environment:
+Many of the reserved characters we noted above can be used in LaTeX within the math environments. So these symbols will display correctly when set apart using the dollar signs (`$ $`) or ```{equation}``` environment:
 
 ```latex
+\begin{equation}
 + - = ! / ( ) [ ] < > | ' : *
+\end{equation}
 ```
 
 Some other commonly used characters and tips for equations:
-- the carat symbol (^) for powers/superscripts
-- underscore for subscripts
-- ```\alpha \gamma \delta``` render the greek letters by cased name
+- The carat symbol (`^`) can be used for powers/superscripts
+- The underscore (`_`) can be used for subscripts
+- ```\alpha \gamma \delta``` render the Greek letters by cased name
 
-It's also quite common to use commands that take values as parameters to present equation symbols. For example ```\sqrt{}``` for displaying square roots, ```\sum{}``` for the sum symbol, and ```\int{}``` for the integral symbol. We can space out the equations a bit by adding line breaks using double backslashes (`\\`).
+It's also quite common to use commands that take values as parameters to present equation symbols. For example ```\sqrt{}``` for displaying square roots, ```\sum{}``` for the sum symbol, and ```\int{}``` for the integral symbol. We can space out the equations a bit by adding line breaks using double backslashes (`\\`):
 
 ```latex
 $\sqrt{4}$
