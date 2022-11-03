@@ -10,14 +10,14 @@ objectives:
 - "Create headings, sections, and subsections."
 - "Learn to bold, italicize, and format text."
 - "Create lists."
-- "Create different classes of documents and use different stypes with them."
+- "Create different classes of documents and use different styles with them."
 - "Create equations and use mathematical notation."
 keypoints:
 - "Sections are delineated by `\\section` and automatically numbered. Subsections can be added with the `\\subsection` command."
 - "The commands `\\textbf{}` and `\\textit{}` can be used to bold and italicize text by taking in text as an argument."
-- "Lists can be created using the `itemize` environment, and numbered lists can be created using the `enumerate` environment."
+- "Lists can be created using the `{itemize}` environment, and numbered lists can be created using the `{enumerate}` environment."
 - "Document types are specified by the `\\documentclass{}`, and can be customized using options added as arguments in `[]`." 
-- "Math typesetting can be used in-line with the text by surrounding formulas with dollar signs, or separately using the `equation` environment."
+- "Math typesetting can be used in-line with the text by surrounding formulas with dollar signs, or separately using the `{equation}` environment."
 ---
 
 # Basic typesetting
@@ -161,8 +161,8 @@ Many of the reserved characters we noted above can be used in LaTeX within the m
 ```
 
 Some other commonly used characters and tips for equations:
-- The carat symbol (`^`) can be used for powers/superscripts
-- The underscore (`_`) can be used for subscripts
+- The carat symbol `^` can be used for powers/superscripts
+- The underscore `_` can be used for subscripts
 - ```\alpha \gamma \delta``` render the Greek letters by cased name
 
 It's also quite common to use commands that take values as parameters to present equation symbols. For example ```\sqrt{}``` for displaying square roots, ```\sum{}``` for the sum symbol, and ```\int{}``` for the integral symbol. We can space out the equations a bit by adding line breaks using double backslashes (`\\`):
