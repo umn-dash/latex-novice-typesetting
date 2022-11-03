@@ -10,10 +10,10 @@ objectives:
 - "Learn how to associate references in the text with citations organized in a BibTex file."
 - "Learn how to generate a bibliography from the citations in BibTex."
 keypoints:
-- "First key point. You can manually add footnotes inline with the text using the `\\footnote{}` command."
-- "Second key point. BibTeX is a file format that allows you to keep track of citation data separately from your main LaTeX document."
-- "Third key point. You can reference citations in a BibTeX file using the `biblatex` package."
-- "Fourth key point. You can change the citation style used in `biblatex` by passing the `[style=...]` option."
+- "You can manually add footnotes inline with the text using the `\\footnote{}` command."
+- "BibTeX is a file format that allows you to keep track of citation data separately from your main LaTeX document."
+- "You can reference citations in a BibTeX file using the `biblatex` package."
+- "You can change the citation style used in `biblatex` by passing the `[style=...]` option."
 ---
 
 ## Footnotes
