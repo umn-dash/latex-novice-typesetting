@@ -3,17 +3,17 @@ title: "Introduction"
 teaching: 10
 exercises: 5
 questions:
-- "Key question: What is LaTeX used for?"
-- "Key question: How can I create a new typeset document?"
+- "What is LaTeX used for?"
+- "How can I create a new typeset document?"
 objectives:
-- "First learning objective. How to create a new LaTeX project in Overleaf."
-- "Second learning objective. Become familiar with the Overleaf ecosystem."
-- "Third learning objective. Learn what the minimum requirements for a LaTeX document are."
-- "Fourth learning objective. Be able to identify an element's role in a LaTeX document."
+- "How to create a new LaTeX project in Overleaf."
+- "Become familiar with the Overleaf ecosystem."
+- "Learn what the minimum requirements for a LaTeX document are."
+- "Be able to identify an element's role in a LaTeX document."
 keypoints:
-- "First key point. Typesetting is used in many domains to convey information in a more readable format."
-- "Second key point. Creating a new, minimal document requires a document declaration, a preamble, and a document body."
-- "Third key point. LaTeX documents consist of commands, environments, and regular text. Commands may take arguments and/or options."
+- "Typesetting is used in many domains to convey information in a more readable format."
+- "Creating a new, minimal document requires a document declaration, a preamble, and a document body."
+- "LaTeX documents consist of commands, environments, and regular text. Commands may take arguments and/or options."
 ---
 
 
@@ -69,25 +69,25 @@ If we look at the different parts of this document, starting at the top, we see:
 1. The document class declaration. This document is an article.
 2. The preamble
   * A package import statement. The `inputenc` package is used in almost everything; it specifies the unicode character set to use. In our case we're using `utf8`.
-  * Some metadata. This includes the title and author
+  * Some metadata. This includes the title and author.
 3. The document body
   * The document environment `\begin{}` statement
-    * the `\maketitle` command
-    * a section heading  
-    * the document environment `\end{}` statement
+    * The `\maketitle` command
+    * A section heading  
+    * The document environment `\end{}` statement
 
 Some of these are absolutely necessary:
 
-* the document class declaration 
-* the document environment `begin{}` statement
-* the document environment `end{}` statement
+* The document class declaration 
+* The document environment `begin{}` statement
+* The document environment `end{}` statement
 
 Without these, the document will not compile.
 
 ### Let's make this document a bit more interesting
 Now we're going to add in some dummy text to get a sense of what a more-complete document would look like.
 
-We'll do this using the lipsum package, which provides sample text blocks. We'll need to add a new `\usepackage{}` command to the document preamble and the `\lipsum` command underneath our section title.
+We'll do this using the `lipsum` package, which provides sample text blocks. We'll need to add a new `\usepackage{}` command to the document preamble and the `\lipsum` command underneath our section title.
 
 
 ```latex
@@ -111,7 +111,7 @@ We'll do this using the lipsum package, which provides sample text blocks. We'll
 \end{document}
 ```
 
-Once you've updated the main.tex file, select the Recompile button in Overleaf to update the preview of your file.
+Once you've updated the main.tex file, select the "Recompile" button in Overleaf to update the preview of your file.
 
 > ## Challenge 1
 >
