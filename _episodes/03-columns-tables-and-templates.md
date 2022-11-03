@@ -3,9 +3,9 @@ title: "Columns, Tables, and Templates"
 teaching: 30
 exercises: 0
 questions:
-- "Key question: How can I add tabular data to a LaTeX document?"
-- "Key question: How can I organize my text into columns?"
-- "Key question: How can I use existing LaTeX templates to style my document in accordance with publisher or organization guidelines?"
+- "How can I add tabular data to a LaTeX document?"
+- "How can I organize my text into columns?"
+- "How can I use existing LaTeX templates to style my document in accordance with publisher or organization guidelines?"
 objectives:
 - "Create and customize a table in LaTeX."
 - "Re-organize our LaTeX document into multiple columns."
@@ -95,10 +95,9 @@ We can add a `\setlength` command in the document preamble passing the `\columns
 
 ```latex
 \setlength{\columnsep}{.75cm}
-
 ```
 
-OverLeaf's [introduction to Multiple Columns](https://www.overleaf.com/learn/latex/Multiple_columns) goes into greater depth on the many ways to set up different column options in your document. 
+OverLeaf's [Introduction to Multiple Columns](https://www.overleaf.com/learn/latex/Multiple_columns) goes into greater depth on the many ways to set up different column options in your document. 
 
 ## LaTeX templates
 
