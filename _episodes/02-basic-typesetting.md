@@ -118,11 +118,11 @@ We've seen how we can organize an article with `\section` commands. We can also 
 
 \section{Introduction}
 	
-\subsection{Math}
+\subsection{Literature Review}
 
 \subsection{Methodology}
 
-\subsubsection{Algorithms}
+\subsubsection{Math}
 
 \subsection{Results}
 
