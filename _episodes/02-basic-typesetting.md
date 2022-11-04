@@ -120,11 +120,13 @@ We've seen how we can organize an article with `\section` commands. We can also 
 	
 \subsection{Math}
 
-\subsection{Experiments}
-
-\subsection{Scientific Computing}
+\subsection{Methodology}
 
 \subsubsection{Algorithms}
+
+\subsection{Results}
+
+
 
 ```
 > ## Quote marks
