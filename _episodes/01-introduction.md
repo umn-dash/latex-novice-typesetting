@@ -43,7 +43,7 @@ In the text editor for our 'blank' document, we can see all of the elements nece
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
 
 \title{LaTeX Workshop}
 \author{Your Name}
@@ -68,7 +68,7 @@ If we look at the different parts of this document, starting at the top, we see:
 
 1. The document class declaration. This document is an article.
 2. The preamble
-  * A package import statement. The `inputenc` package is used in almost everything; it specifies the unicode character set to use. In our case we're using `utf8`.
+  * A package import statement. The `graphicx` package is used to allow us to add images to our document, which the comment (beginning with the % symbol) tells us.
   * Some metadata. This includes the title and author.
 3. The document body
   * The document environment `\begin{}` statement
@@ -92,7 +92,7 @@ We'll do this using the `lipsum` package, which provides sample text blocks. We'
 
 ```latex
 \documentclass{article}
-\usepackage[utf8]{inputenc}
+\usepackage{graphicx} % Required for inserting images
 \usepackage{lipsum}
 
 \title{Let's do Science!}
@@ -120,7 +120,7 @@ Once you've updated the main.tex file, select the "Recompile" button in Overleaf
 >
 > ```latex
 > \documentclass{article}
-> \usepackage[utf8]{inputenc}
+> \usepackage{graphicx} % Required for inserting images
 >
 > \title{The Playboy of the Western World}
 > \author{JM Synge}
