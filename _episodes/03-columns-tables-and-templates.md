@@ -78,8 +78,9 @@ It's relatively easy to create a two column LaTeX document, by adding a `twocolu
 To work with more than two columns at a time, you can import the `multicol` package and use the `multicols` environment within your document. In curly brackets following the multicols environment `\begin` command you can enter the number of columns, and in square brackets you can add any column headers you want to include in between square brackets:
 
 ```latex
-\usepackage{multicol}
+
 \documentclass{article}
+\usepackage{multicol}
 
 \begin{multicols}{3}
 [
